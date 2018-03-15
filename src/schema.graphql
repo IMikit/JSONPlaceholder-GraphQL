@@ -1,0 +1,59 @@
+type Query {
+  posts: [Post!]!
+  post(id: ID!): Post
+
+  comments: [Comment!]!
+  comment(id: ID!): Comment
+
+  albums: [Album!]!
+  album(id: ID!): Album
+
+  photos: [Photo!]!
+  photo(id: ID!): Photo
+
+  todos: [Todo!]!
+  todo(id: ID!): Todo
+  
+  users: [User!]!
+  user(id: ID!): User
+}
+
+type Post {
+  id: ID!
+  title: String!
+  body: String!
+}
+
+type Comment {
+  id: ID!
+  name: String!
+  email: String!
+  body: String!
+}
+
+type Album {
+  id: ID!
+  title: String!
+}
+
+type Photo {
+  id: ID!
+  title: String!
+  url: String!
+  thumbnailUrl: String!
+}
+
+type Todo {
+  id: ID!
+  title: String!
+  completed: Boolean!
+}
+
+type User {
+  id: ID!
+  name: String!
+  username: String!
+  email: String!
+  phone: String!
+  
+}
